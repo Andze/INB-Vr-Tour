@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3346396}
   - 23: {fileID: 2341646}
   - 95: {fileID: 9523754}
+  - 65: {fileID: 6586708}
   m_Layer: 0
   m_Name: door_double_door_L
   m_TagString: Untagged
@@ -78,6 +79,7 @@ GameObject:
   - 33: {fileID: 3350244}
   - 23: {fileID: 2317804}
   - 95: {fileID: 9594796}
+  - 65: {fileID: 6598034}
   m_Layer: 0
   m_Name: door_double_door_R
   m_TagString: Untagged
@@ -137,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 153146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 479108}
@@ -180,7 +182,7 @@ Transform:
   m_LocalRotation: {x: 0.7069844, y: 0, z: 0, w: -0.7072292}
   m_LocalPosition: {x: -0.8253746, y: 0.0010264516, z: 0.00017350912}
   m_LocalScale: {x: 100, y: 100.00001, z: 100.00001}
-  m_LocalEulerAnglesHint: {x: 270, y: 43.199997, z: 0}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
   m_Children:
   - {fileID: 477896}
   m_Father: {fileID: 424378}
@@ -350,6 +352,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150376}
   m_Mesh: {fileID: 4300002, guid: e063bc806dead054aafcb5f26a725762, type: 3}
+--- !u!65 &6586708
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.008611541, y: 0.0007059219, z: 0.021697078}
+  m_Center: {x: -0.0039354963, y: -0.00000006688059, z: 0.010848537}
+--- !u!65 &6598034
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162272}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.008605362, y: 0.0007059224, z: 0.021697085}
+  m_Center: {x: 0.0039324067, y: 0.000000067695204, z: 0.010848541}
 --- !u!95 &9523754
 Animator:
   serializedVersion: 3
