@@ -13,10 +13,10 @@ public class SteamVR_UpdatePoses : MonoBehaviour
 	void Awake()
 	{
 		var camera = GetComponent<Camera>();
-#if !(UNITY_5_3 || UNITY_5_2 || UNITY_5_1 || UNITY_5_0)
-		camera.stereoTargetEye = StereoTargetEyeMask.None;
+#if !(UNITY_5_4 || UNITY_5_3 || UNITY_5_2 || UNITY_5_1 || UNITY_5_0)
+    camera.targetEye = TargetEyeMask.kTargetEyeMaskNone;  
 #endif
-		camera.clearFlags = CameraClearFlags.Nothing;
+        camera.clearFlags = CameraClearFlags.Nothing;
 		camera.useOcclusionCulling = false;
 		camera.cullingMask = 0;
 		camera.depth = -9999;
