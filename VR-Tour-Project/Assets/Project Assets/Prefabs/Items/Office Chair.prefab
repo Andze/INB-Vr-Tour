@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000010236994504}
+  m_RootGameObject: {fileID: 1000013417915214}
   m_IsPrefabParent: 1
---- !u!1 &1000010236994504
+--- !u!1 &1000013417915214
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000011094380730}
-  - 33: {fileID: 33000013341981284}
-  - 23: {fileID: 23000012138682284}
+  - 4: {fileID: 4000010348071472}
+  - 33: {fileID: 33000013673115588}
+  - 23: {fileID: 23000011478097884}
   m_Layer: 0
   m_Name: Office Chair
   m_TagString: Untagged
@@ -28,25 +28,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &4000011094380730
+--- !u!4 &4000010348071472
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010236994504}
-  m_LocalRotation: {x: -0.00000019861236, y: -0.7071068, z: -0.7071068, w: 0.00000019861236}
+  m_GameObject: {fileID: 1000013417915214}
+  m_LocalRotation: {x: -0.000000053385076, y: 0.7071068, z: 0.70710677, w: 0.00000005338508}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 49.91811, y: 49.91811, z: 112.53667}
+  m_LocalScale: {x: 37.438583, y: 37.438583, z: 84.4025}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -179.99998}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &23000012138682284
+--- !u!23 &23000011478097884
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010236994504}
+  m_GameObject: {fileID: 1000013417915214}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -70,10 +70,10 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33000013341981284
+--- !u!33 &33000013673115588
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010236994504}
+  m_GameObject: {fileID: 1000013417915214}
   m_Mesh: {fileID: 4300000, guid: 8f6c42424536c7a4387e00b4fdf5116c, type: 3}

@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000013450581826}
+  m_RootGameObject: {fileID: 1000013701481776}
   m_IsPrefabParent: 1
---- !u!1 &1000013450581826
+--- !u!1 &1000013701481776
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000012215370102}
-  - 33: {fileID: 33000010264644644}
-  - 23: {fileID: 23000010392734512}
+  - 4: {fileID: 4000013788887114}
+  - 33: {fileID: 33000011327545876}
+  - 23: {fileID: 23000011199657120}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -28,25 +28,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &4000012215370102
+--- !u!4 &4000013788887114
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013450581826}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_GameObject: {fileID: 1000013701481776}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 58.740074, y: 85.82491, z: 100}
+  m_LocalScale: {x: 44.055054, y: 64.36866, z: 74.99997}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &23000010392734512
+--- !u!23 &23000011199657120
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013450581826}
+  m_GameObject: {fileID: 1000013701481776}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -70,10 +70,10 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33000010264644644
+--- !u!33 &33000011327545876
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013450581826}
+  m_GameObject: {fileID: 1000013701481776}
   m_Mesh: {fileID: 4300000, guid: ea33255610d76724199a783c0327e7e9, type: 3}
