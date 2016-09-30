@@ -6,10 +6,109 @@ ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Atrium Desk
+    100004: Atrium High Desk
+    100006: Bench with Table
+    100008: Bin
+    100010: Chair
+    100012: Corner Sofa
+    100014: Door Handle Decent
+    100016: Flat Couch
+    100018: Flat Couch With Back
+    100020: High Chair
+    100022: Monitor
+    100024: Mouse (Liams)
+    100026: Office Chair No arms
+    100028: Office Chair With Arms
+    100030: Rectangle Coffee Table
+    100032: Round Table
+    100034: Sofa Double
+    100036: Sofa Single
+    100038: Square Coffee Table
+    100040: Wall-TV
     400000: //RootNode
+    400002: Atrium Desk
+    400004: Atrium High Desk
+    400006: Bench with Table
+    400008: Bin
+    400010: Chair
+    400012: Corner Sofa
+    400014: Door Handle Decent
+    400016: Flat Couch
+    400018: Flat Couch With Back
+    400020: High Chair
+    400022: Monitor
+    400024: Mouse (Liams)
+    400026: Office Chair No arms
+    400028: Office Chair With Arms
+    400030: Rectangle Coffee Table
+    400032: Round Table
+    400034: Sofa Double
+    400036: Sofa Single
+    400038: Square Coffee Table
+    400040: Wall-TV
     2300000: //RootNode
+    2300002: Atrium Desk
+    2300004: Atrium High Desk
+    2300006: Bench with Table
+    2300008: Bin
+    2300010: Chair
+    2300012: Corner Sofa
+    2300014: Door Handle Decent
+    2300016: Flat Couch
+    2300018: Flat Couch With Back
+    2300020: High Chair
+    2300022: Monitor
+    2300024: Mouse (Liams)
+    2300026: Office Chair No arms
+    2300028: Office Chair With Arms
+    2300030: Rectangle Coffee Table
+    2300032: Round Table
+    2300034: Sofa Double
+    2300036: Sofa Single
+    2300038: Square Coffee Table
+    2300040: Wall-TV
     3300000: //RootNode
+    3300002: Atrium Desk
+    3300004: Atrium High Desk
+    3300006: Bench with Table
+    3300008: Bin
+    3300010: Chair
+    3300012: Corner Sofa
+    3300014: Door Handle Decent
+    3300016: Flat Couch
+    3300018: Flat Couch With Back
+    3300020: High Chair
+    3300022: Monitor
+    3300024: Mouse (Liams)
+    3300026: Office Chair No arms
+    3300028: Office Chair With Arms
+    3300030: Rectangle Coffee Table
+    3300032: Round Table
+    3300034: Sofa Double
+    3300036: Sofa Single
+    3300038: Square Coffee Table
+    3300040: Wall-TV
     4300000: Bin
+    4300002: Door Handle Decent
+    4300004: Mouse (Liams)
+    4300006: Flat Couch
+    4300008: Office Chair No arms
+    4300010: Chair
+    4300012: Atrium Desk
+    4300014: Corner Sofa
+    4300016: Square Coffee Table
+    4300018: Sofa Double
+    4300020: Wall-TV
+    4300022: Bench with Table
+    4300024: Round Table
+    4300026: Monitor
+    4300028: Sofa Single
+    4300030: Rectangle Coffee Table
+    4300032: Office Chair With Arms
+    4300034: Flat Couch With Back
+    4300036: Atrium High Desk
+    4300038: High Chair
   materials:
     importMaterials: 0
     materialName: 0
