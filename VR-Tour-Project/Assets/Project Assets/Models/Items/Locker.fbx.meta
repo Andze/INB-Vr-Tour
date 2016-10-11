@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 04f42f6e69e71654d8cda21e1a8e9d30
+timeCreated: 1476180598
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Atrium Desk
+    100002: Atrium High Desk
+    100004: Bench with Table
+    100006: Bin
+    100008: Chair
+    100010: Corner Sofa
+    100012: Cube
+    100014: Divider
+    100016: Door Handle Decent
+    100018: Filling Cabinet
+    100020: Flat Couch
+    100022: Flat Couch With Back
+    100024: High Chair
+    100026: //RootNode
+    100028: Locker
+    100030: Monitor
+    100032: Mouse
+    100034: Mouse (Liams)
+    100036: NoticeBoard
+    100038: Office Chair No arms
+    100040: Office Chair With Arms
+    100042: Rectangle Coffee Table
+    100044: Round Table
+    100046: Sofa Double
+    100048: Sofa Single
+    100050: Square Coffee Table
+    100052: Wall-TV
+    100054: WhiteBoard
+    400000: Atrium Desk
+    400002: Atrium High Desk
+    400004: Bench with Table
+    400006: Bin
+    400008: Chair
+    400010: Corner Sofa
+    400012: Cube
+    400014: Divider
+    400016: Door Handle Decent
+    400018: Filling Cabinet
+    400020: Flat Couch
+    400022: Flat Couch With Back
+    400024: High Chair
+    400026: //RootNode
+    400028: Locker
+    400030: Monitor
+    400032: Mouse
+    400034: Mouse (Liams)
+    400036: NoticeBoard
+    400038: Office Chair No arms
+    400040: Office Chair With Arms
+    400042: Rectangle Coffee Table
+    400044: Round Table
+    400046: Sofa Double
+    400048: Sofa Single
+    400050: Square Coffee Table
+    400052: Wall-TV
+    400054: WhiteBoard
+    2300000: Atrium Desk
+    2300002: Atrium High Desk
+    2300004: Bench with Table
+    2300006: Bin
+    2300008: Chair
+    2300010: Corner Sofa
+    2300012: Cube
+    2300014: Divider
+    2300016: Door Handle Decent
+    2300018: Filling Cabinet
+    2300020: Flat Couch
+    2300022: Flat Couch With Back
+    2300024: High Chair
+    2300026: Locker
+    2300028: Monitor
+    2300030: Mouse
+    2300032: Mouse (Liams)
+    2300034: NoticeBoard
+    2300036: Office Chair No arms
+    2300038: Office Chair With Arms
+    2300040: Rectangle Coffee Table
+    2300042: Round Table
+    2300044: Sofa Double
+    2300046: Sofa Single
+    2300048: Square Coffee Table
+    2300050: Wall-TV
+    2300052: WhiteBoard
+    2300054: //RootNode
+    3300000: Atrium Desk
+    3300002: Atrium High Desk
+    3300004: Bench with Table
+    3300006: Bin
+    3300008: Chair
+    3300010: Corner Sofa
+    3300012: Cube
+    3300014: Divider
+    3300016: Door Handle Decent
+    3300018: Filling Cabinet
+    3300020: Flat Couch
+    3300022: Flat Couch With Back
+    3300024: High Chair
+    3300026: Locker
+    3300028: Monitor
+    3300030: Mouse
+    3300032: Mouse (Liams)
+    3300034: NoticeBoard
+    3300036: Office Chair No arms
+    3300038: Office Chair With Arms
+    3300040: Rectangle Coffee Table
+    3300042: Round Table
+    3300044: Sofa Double
+    3300046: Sofa Single
+    3300048: Square Coffee Table
+    3300050: Wall-TV
+    3300052: WhiteBoard
+    3300054: //RootNode
+    4300000: Locker
+    4300002: WhiteBoard
+    4300004: NoticeBoard
+    4300006: Mouse
+    4300008: Filling Cabinet
+    4300010: Cube
+    4300012: Divider
+    4300014: Door Handle Decent
+    4300016: Mouse (Liams)
+    4300018: Flat Couch
+    4300020: Office Chair No arms
+    4300022: Chair
+    4300024: Atrium Desk
+    4300026: Corner Sofa
+    4300028: Square Coffee Table
+    4300030: Sofa Double
+    4300032: Wall-TV
+    4300034: Bench with Table
+    4300036: Round Table
+    4300038: Monitor
+    4300040: Sofa Single
+    4300042: Rectangle Coffee Table
+    4300044: Office Chair With Arms
+    4300046: Bin
+    4300048: Flat Couch With Back
+    4300050: Atrium High Desk
+    4300052: High Chair
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
