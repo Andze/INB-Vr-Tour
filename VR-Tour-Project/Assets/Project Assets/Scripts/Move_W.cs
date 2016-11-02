@@ -18,6 +18,5 @@ public class Move_W : MonoBehaviour {
         {
             transform.position += transform.forward * Time.deltaTime * MovementSpeed;
         }
-    
     }
 }
