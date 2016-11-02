@@ -1,14 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public class Waypoint
 {
     public int index = -1;
     public float curveRadius = 0.5f;
+    public int bezierIndex = 0;
 
-    private GameObject _object;
+    [SerializeField]
     private WaypointSystem _waypointSystem;
+    [SerializeField]
     private Vector3[] bezierPts;
+    [SerializeField]
+    private GameObject _object;
 
     public Waypoint(WaypointSystem waypointSystem, int index)
     {
@@ -49,10 +54,10 @@ public class Waypoint
         Vector3 bHead = nextWaypoint - _object.transform.position;
         Vector3 bDir = bHead / bHead.magnitude;
 
-        Vector3 p0 = _object.transform.position + (aDir * 0.5f);
-        Vector3 p1 = _object.transform.position + (aDir * 0.25f);
-        Vector3 p2 = _object.transform.position + (bDir * 0.25f);
-        Vector3 p3 = _object.transform.position + (bDir * 0.5f);
+        Vector3 p0 = _object.transform.position + (aDir * curveRadius);
+        Vector3 p1 = _object.transform.position + (aDir * (curveRadius / 2f));
+        Vector3 p2 = _object.transform.position + (bDir * (curveRadius / 2f));
+        Vector3 p3 = _object.transform.position + (bDir * curveRadius);
 
         bezierPts = new Vector3[10];
         for (int i = 1; i <= bezierPts.Length; i++)
@@ -95,5 +100,24 @@ public class Waypoint
     public Vector3[] GetBezierPoints()
     {
         return bezierPts;
+    }
+
+    public bool GetNextPoint(out Vector3 value)
+    {
+        if (_waypointSystem.curvesRequireCalculation || bezierPts.Length == 0)
+        {
+            value = _object.transform.position;
+            return true;
+        }
+        else if (bezierIndex < bezierPts.Length)
+        {
+            value = bezierPts[bezierIndex++];
+            return true;
+        }
+        else
+        {
+            value = Vector3.zero;
+            return false;
+        }
     }
 }

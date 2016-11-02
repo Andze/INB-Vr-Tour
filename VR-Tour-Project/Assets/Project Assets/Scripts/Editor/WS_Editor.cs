@@ -3,9 +3,11 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 [CustomEditor(typeof(WaypointSystem))]
 public class WS_Editor : Editor
 {
+    [SerializeField]
     private WaypointSystem _target;
 
     void OnEnable()
@@ -52,12 +54,14 @@ public class WS_Editor : Editor
 
             #region Directional Handles
             // Rotation Handle
-            Handles.color = new Color(0.5f, 0f, 1f, 1f);
             Quaternion rotation = Handles.Disc(t.rotation, t.position, t.up, w.curveRadius, false, 1f);
+
+            // Radius Handle
+            float radius = Handles.ScaleValueHandle(w.curveRadius, t.position + (t.transform.forward * w.curveRadius), t.rotation, 0.5f, Handles.ConeCap, 1f);
 
             if (EditorGUI.EndChangeCheck())
             {
-                if (t.position != position || t.rotation != rotation)
+                if (t.position != position || t.rotation != rotation || w.curveRadius != radius)
                     _target.curvesRequireCalculation = true;
 
                 Undo.RecordObject(target, "Changed Target Position.");
@@ -65,8 +69,10 @@ public class WS_Editor : Editor
 
                 Undo.RecordObject(target, "Changed Target Rotation.");
                 t.rotation = rotation;
+
+                Undo.RecordObject(target, "Changed Target Radius.");
+                w.curveRadius = radius;
             }
-            Handles.ConeCap(0, t.position + (t.forward.normalized * w.curveRadius), t.rotation, 0.1f);
             #endregion
 
             #region Connections

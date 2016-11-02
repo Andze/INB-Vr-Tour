@@ -2,10 +2,68 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class WaypointSystem : MonoBehaviour
 {
     public List<Waypoint> waypoints = new List<Waypoint>();
     public bool curvesRequireCalculation = false;
+    
+    private bool done = false;
+    private int waypointIndex = 0;
+    private Vector3 nextPoint;
+    private Quaternion lastRotation;
+    private float totalDistance;
+
+    void Start()
+    {
+        if (waypoints.Count > 0)
+        {
+            totalDistance = Vector3.Distance(transform.position, waypoints[waypointIndex].GetTransform().position);
+            lastRotation = transform.rotation;
+
+            waypoints[waypointIndex++].GetNextPoint(out nextPoint);
+        }
+        else Done();
+    }
+
+    void Update()
+    {
+        if (!done)
+        {
+            if (transform.position == nextPoint)
+            {
+                if (waypointIndex + 1 >= waypoints.Count)
+                {
+                    Done();
+                    return;
+                }
+
+                if (!waypoints[waypointIndex].GetNextPoint(out nextPoint))
+                {
+                    if (++waypointIndex < waypoints.Count)
+                        waypoints[waypointIndex].GetNextPoint(out nextPoint);
+                }
+
+                totalDistance = Vector3.Distance(transform.position, waypoints[waypointIndex].GetTransform().position);
+                lastRotation = transform.rotation;
+            }
+            
+            transform.position = Vector3.MoveTowards(transform.position, nextPoint, 0.5f * Time.deltaTime);
+
+            float currentDistance = Vector3.Distance(transform.position, waypoints[waypointIndex].GetTransform().position);
+            if (currentDistance != 0.0f)
+                transform.rotation = Quaternion.Lerp(waypoints[waypointIndex].GetTransform().rotation, lastRotation, currentDistance / totalDistance);
+        }
+    }
+
+    private void Done()
+    {
+        done = true;
+        waypointIndex = 0;
+
+        for (int i = 0; i < waypoints.Count; i++)
+            waypoints[i].bezierIndex = 0;
+    }
 
     public void AddWaypoint()
     {
