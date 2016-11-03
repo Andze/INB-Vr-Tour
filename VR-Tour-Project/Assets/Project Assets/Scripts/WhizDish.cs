@@ -9,12 +9,14 @@ public class WhizDish : MonoBehaviour
     public float movementSpeed = 2.5f;
     public float amplify = 25;
     public GameObject orientationFocus;
+    public bool inverseDirection = false;
 
     private int iStartTimeout;
     private const int frequency = 2000;
     private float[] samples;
     private int deviceIndex;
     private AudioSource audioSrc;
+    private float directionMultiplier;
 
     void Start()
     {
@@ -25,6 +27,8 @@ public class WhizDish : MonoBehaviour
 
         if (orientationFocus == null)
             orientationFocus = gameObject;
+
+        directionMultiplier = inverseDirection ? -1f : 1f;
 
         StartMicListener();
     }
@@ -44,6 +48,11 @@ public class WhizDish : MonoBehaviour
     private void StartMicListener()
     {
         Debug.Log(string.Format("StartMicListener called devices_count: {0}", Microphone.devices.Length));
+
+        // Disable Vive Teleportation if WizDish is plugged in.
+        if (Microphone.devices.Length >= 2)
+            GetComponentInChildren<TeleportVive>().enabled = false;
+        else enabled = false;
 
         if (Microphone.devices.Length > 0)
         {
@@ -100,8 +109,8 @@ public class WhizDish : MonoBehaviour
         }
 
         if (moveForward && orientationFocus != null)
-            transform.position += MultiplyVector(orientationFocus.transform.forward, new Vector3(1, 0, 1))
-                * Time.deltaTime * movementSpeed;
+            transform.position += MultiplyVector(orientationFocus.transform.up, new Vector3(1, 0, 1))
+                * directionMultiplier * Time.deltaTime * movementSpeed;
     }
 
     private Vector3 MultiplyVector(Vector3 a, Vector3 b)
