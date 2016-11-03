@@ -32,7 +32,7 @@ public class WaypointSystem : MonoBehaviour
         {
             if (transform.position == nextPoint)
             {
-                if (waypointIndex + 1 >= waypoints.Count)
+                if (waypointIndex >= waypoints.Count)
                 {
                     Done();
                     return;
