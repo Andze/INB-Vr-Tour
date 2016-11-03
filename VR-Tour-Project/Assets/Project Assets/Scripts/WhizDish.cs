@@ -10,6 +10,7 @@ public class WhizDish : MonoBehaviour
     public float amplify = 25;
     public GameObject orientationFocus;
     public bool inverseDirection = false;
+    public float dampening = 0.5f;
 
     private int iStartTimeout;
     private const int frequency = 2000;
@@ -17,6 +18,7 @@ public class WhizDish : MonoBehaviour
     private int deviceIndex;
     private AudioSource audioSrc;
     private float directionMultiplier;
+    private Vector3 velocity;
 
     void Start()
     {
@@ -32,9 +34,12 @@ public class WhizDish : MonoBehaviour
 
         StartMicListener();
     }
-    
+
+    //float elapsedTime = 0.0f;
     void Update()
     {
+        //elapsedTime += Time.deltaTime;
+
         if (!GetComponent<AudioSource>().isPlaying)
             StartMicListener();
 
@@ -42,6 +47,7 @@ public class WhizDish : MonoBehaviour
             iStartTimeout = iStartTimeout - 1;
 
         AnalyzeSound();
+        //CalculateStepSpeed();
         UpdateMovement();
     }
     
@@ -89,18 +95,41 @@ public class WhizDish : MonoBehaviour
         }
 
         wizAudio *= amplify;
-        Debug.Log(wizAudio);
 
         for (int i = 0; i < 2000; i++)
             samples[i] = 0;
     }
+    
+
+    //bool isStepping = false;
+    //float stepStart = 0.0f;
+    //float stepTime = 0.0f;
+    //private void CalculateStepSpeed()
+    //{
+    //    if (!isStepping)
+    //    {
+    //        if (wizAudio > 0.1f)
+    //        {
+    //            isStepping = true;
+    //            stepStart = elapsedTime;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        if (wizAudio < 0.1f)
+    //        {
+    //            isStepping = false;
+    //            stepTime = elapsedTime - stepStart;
+    //        }
+    //    }
+    //}
 
     private void UpdateMovement()
     {
         bool moveForward = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
 
         float micSpeed = wizAudio;
-        if (micSpeed > .1)
+        if (micSpeed > 0.35f)
             moveForward = true;
         else
         {
@@ -108,9 +137,30 @@ public class WhizDish : MonoBehaviour
             micSpeed = 0;
         }
 
+        float speedMod = micSpeed > 1f ? micSpeed * 2f : 1f;
+
         if (moveForward && orientationFocus != null)
-            transform.position += MultiplyVector(orientationFocus.transform.up, new Vector3(1, 0, 1))
-                * directionMultiplier * Time.deltaTime * movementSpeed;
+        {
+            velocity = MultiplyVector(orientationFocus.transform.up, new Vector3(1, 0, 1))
+                * directionMultiplier * Time.deltaTime * movementSpeed * speedMod;
+        }
+        
+        transform.position += velocity;
+
+        if (!VectorLessThan(velocity, 0.01f))
+            velocity *= dampening;
+        else velocity = Vector3.zero;
+
+
+        //Debug.Log(stepTime);
+        //if (orientationFocus != null && wizAudio > 0.1f)
+        //{
+        //    float speedMod = 1f - stepTime;
+
+        //    if (speedMod > 0f)
+        //        transform.position += MultiplyVector(orientationFocus.transform.up, new Vector3(1, 0, 1))
+        //            * directionMultiplier * Time.deltaTime * movementSpeed * speedMod;
+        //}
     }
 
     private Vector3 MultiplyVector(Vector3 a, Vector3 b)
@@ -120,5 +170,16 @@ public class WhizDish : MonoBehaviour
         float z = a.z * b.z;
 
         return new Vector3(x, y, z);
+    }
+
+    private bool VectorLessThan(Vector3 a, float b)
+    {
+        bool cX = Mathf.Abs(a.x) < b;
+        bool cY = Mathf.Abs(a.y) < b;
+        bool cZ = Mathf.Abs(a.z) < b;
+
+        if (cX && cY && cZ)
+            return true;
+        else return false;
     }
 }
