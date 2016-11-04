@@ -1,0 +1,13 @@
+To do for Thursday
+
+- Lighting Fixtures
+- Delete old walls remaning in lecture hall
+- Add glass to entrance
+- Add Stairs
+- Add support for stairs with Wizdish
+- Fill rooms closest to entrance
+- Check audio for video
+- Did someone say Newta Cola?
+- Record video in dank 8k
+- Re bake everything then build
+ 
