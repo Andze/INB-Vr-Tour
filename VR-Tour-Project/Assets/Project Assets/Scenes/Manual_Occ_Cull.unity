@@ -889,7 +889,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11415034, guid: 8c4b3eda5b2d568448d8635dc6c0e9c1, type: 2}
       propertyPath: videoResolutionWidth
-      value: 4096
+      value: 8192
       objectReference: {fileID: 0}
     - target: {fileID: 153688, guid: 8c4b3eda5b2d568448d8635dc6c0e9c1, type: 2}
       propertyPath: m_Name
@@ -909,6 +909,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11431380, guid: 8c4b3eda5b2d568448d8635dc6c0e9c1, type: 2}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415034, guid: 8c4b3eda5b2d568448d8635dc6c0e9c1, type: 2}
+      propertyPath: enableDebugging
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
