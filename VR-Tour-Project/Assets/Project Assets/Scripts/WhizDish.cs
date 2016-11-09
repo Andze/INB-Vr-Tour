@@ -57,7 +57,10 @@ public class WhizDish : MonoBehaviour
 
         // Disable Vive Teleportation if WizDish is plugged in.
         if (Microphone.devices.Length >= 2)
-            GetComponentInChildren<TeleportVive>().enabled = false;
+        {
+            TeleportVive tV = GetComponentInChildren<TeleportVive>();
+            if (tV != null) tV.enabled = false;
+        }
         else enabled = false;
 
         if (Microphone.devices.Length > 0)
