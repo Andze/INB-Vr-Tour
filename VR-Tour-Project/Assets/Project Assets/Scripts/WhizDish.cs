@@ -15,7 +15,6 @@ public class WhizDish : MonoBehaviour
     private int iStartTimeout;
     private const int frequency = 2000;
     private float[] samples;
-    private int deviceIndex;
     private AudioSource audioSrc;
     private float directionMultiplier;
     private Vector3 velocity;
@@ -24,7 +23,6 @@ public class WhizDish : MonoBehaviour
     {
         iStartTimeout = 25;
         samples = new float[frequency];
-        deviceIndex = 0;
         audioSrc = gameObject.GetComponent<AudioSource>();
 
         if (orientationFocus == null)
@@ -55,25 +53,38 @@ public class WhizDish : MonoBehaviour
     {
         Debug.Log(string.Format("StartMicListener called devices_count: {0}", Microphone.devices.Length));
 
-        // Disable Vive Teleportation if WizDish is plugged in.
-        if (Microphone.devices.Length >= 2)
+        // Check if a valid Microphone is connected.
+        bool wizConnected = false;
+        for (int i = 0; i < Microphone.devices.Length; i++)
         {
+            if (Microphone.devices[i] == "Microphone (Realtek High Definition Audio)")
+            {
+                wizConnected = true;
+                break;
+            }
+        }
+
+        // Disable Vive Teleportation if WizDish is plugged in.
+        if (wizConnected)
+        {
+            Debug.Log("WizDish connected.");
+
             TeleportVive tV = GetComponentInChildren<TeleportVive>();
             if (tV != null) tV.enabled = false;
-        }
-        else enabled = false;
 
-        if (Microphone.devices.Length > 0)
-        {
-            audioSrc.clip = Microphone.Start(Microphone.devices[deviceIndex], true, 1, frequency);
+            audioSrc.clip = Microphone.Start(null, true, 1, frequency);
             audioSrc.loop = true;
             audioSrc.mute = false; // true; // Mute the sound, we don’t want the player to hear it
-            
-            while (!(Microphone.GetPosition(Microphone.devices[deviceIndex]) > 0))
-                Debug.Log(string.Format("StartMicListener called position {0}", Microphone.GetPosition(Microphone.devices[deviceIndex])));
 
-            Debug.Log(string.Format("StartMicListener before play is called."));
+            while (!(Microphone.GetPosition(null) > 0))
+                Debug.Log(string.Format("StartMicListener called position {0}", Microphone.GetPosition(null)));
+            
             audioSrc.Play();
+        }
+        else
+        {
+            Debug.Log("No WizDish connected.");
+            enabled = false;
         }
     }
 
